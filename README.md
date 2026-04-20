@@ -16,3 +16,15 @@ A simulated attacker (Kali Linux) performed an Nmap port scan against a Windows 
 
 The following Nmap command was used to simulate reconnaissance activity:
 nmap -n -sT -Pn -p 80,135,445,3389 192.168.56.103
+
+Detection & Analysis
+
+Sysmon Event ID 3 logs were used to detect network connections originating from the attacker machine.
+
+### Key Findings
+- Source IP: 192.168.56.102
+- Destination IP: 192.168.56.103
+- Multiple connection attempts across ports
+- Behaviour consistent with port scanning
+
+  
